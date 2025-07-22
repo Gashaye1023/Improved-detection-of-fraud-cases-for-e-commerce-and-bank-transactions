@@ -1,0 +1,25 @@
+# Data manipulation and analysis
+pandas==1.5.3
+numpy==1.23.5
+
+# Data visualization
+matplotlib==3.6.3
+seaborn==0.12.2
+
+# Machine learning
+scikit-learn==1.2.0
+xgboost==1.7.5
+lightgbm==3.3.2
+statsmodels==0.13.5
+
+# Handling imbalanced datasets
+imbalanced-learn==0.9.1
+
+# Model explainability
+shap==0.41.0
+
+# For working with Jupyter notebooks
+notebook==6.5.3
+
+# Additional libraries
+requests==2.28.1  # For API calls, if necessary
