@@ -16,7 +16,13 @@ This project aims to improve the detection of fraud cases in e-commerce and bank
 - `data/`: Contains raw datasets.
 - `notebooks/`: Jupyter notebooks for analysis and model training.
 - `src/`: Source code for data preprocessing, feature engineering, model selection, and explainability.
-
+## Features
+- Data preprocessing and geolocation merging
+- Feature engineering (time-based features, transaction velocity)
+- Logistic Regression and Random Forest models
+- SHAP explainability
+- Streamlit dashboard
+- Unit tests and CI/CD
 ## Setup Instructions
 
 1. Clone the repository:

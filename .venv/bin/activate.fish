@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV '/home/g/10/week 8 9/Improved-detection-of-fraud-cases-for-e-commerce-and-bank-transactions/.venv'
+set -gx VIRTUAL_ENV '/home/g/ALL/10/week 12/Improved-detection-of-fraud-cases-for-e-commerce-and-bank-transactions/.venv'
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH
