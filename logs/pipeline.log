@@ -1,0 +1,19 @@
+2025-08-21 17:27:11,913 - INFO - Configuration loaded from config.yaml
+2025-08-21 17:27:12,225 - INFO - Fraud data loaded and cleaned successfully.
+2025-08-21 17:27:12,255 - INFO - IP mapping data loaded successfully.
+2025-08-21 17:28:30,144 - INFO - Geolocation merged successfully.
+2025-08-21 17:28:30,209 - INFO - Feature engineering completed.
+2025-08-21 17:28:34,133 - INFO - Processed data saved to data/processed_fraud_data.csv
+2025-08-21 17:28:35,463 - INFO - Data balanced using SMOTE.
+2025-08-21 17:29:10,497 - INFO - Logistic Regression model saved to src/logistic_regression_model.pkl
+2025-08-21 17:29:10,497 - INFO - Random Forest model saved to src/random_forest_model.pkl
+2025-08-21 17:29:10,521 - INFO - Logistic Regression F1-Score: 0.2764994341757827, PR-AUC: 0.41082612410802843
+2025-08-21 17:29:10,521 - INFO - Random Forest F1-Score: 0.6814880687713057
+2025-08-21 17:29:10,521 - INFO - Logistic Regression Confusion Matrix:
+[[27058 14059]
+ [ 1285  2932]]
+2025-08-21 17:29:10,522 - INFO - Random Forest Confusion Matrix:
+[[40886   231]
+ [ 1918  2299]]
+2025-08-21 17:29:11,027 - INFO - Best model (Random Forest) saved to src/best_fraud_model.pkl
+2025-08-21 17:29:11,030 - INFO - Best model (based on F1-score): Random Forest

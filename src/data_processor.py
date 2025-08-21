@@ -2,6 +2,7 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from imblearn.over_sampling import SMOTE
+from sklearn.model_selection import train_test_split
 import logging
 
 class DataProcessor:
@@ -20,13 +21,31 @@ class DataProcessor:
     
     def merge_geolocation(self, fraud_df: pd.DataFrame, ip_df: pd.DataFrame) -> pd.DataFrame:
         """Merge fraud data with IP to country mapping."""
+        # Handle NaN values in the fraud DataFrame
+        fraud_df['ip_address'] = fraud_df['ip_address'].fillna('0.0.0.0')
         fraud_df['ip_int'] = fraud_df['ip_address'].apply(ip_to_int)
+
+        # Create integer columns in the IP DataFrame
         ip_df['lower_int'] = ip_df['lower_bound_ip_address'].apply(ip_to_int)
         ip_df['upper_int'] = ip_df['upper_bound_ip_address'].apply(ip_to_int)
-        merged = pd.merge_asof(fraud_df.sort_values('ip_int'), 
-                             ip_df.sort_values('lower_int'),
-                             left_on='ip_int', right_on='lower_int',
-                             by='upper_int', direction='nearest')
+
+        # Debugging: Check the columns and sample data
+        self.logger.debug("Columns in IP DataFrame: %s", ip_df.columns)
+        self.logger.debug("Sample data in IP DataFrame:\n%s", ip_df.head())
+
+        # Ensure required columns exist
+        if 'lower_int' not in ip_df.columns or 'upper_int' not in ip_df.columns:
+            self.logger.error("Required columns are missing in IP DataFrame")
+            raise KeyError("Required columns are missing in IP DataFrame")
+
+        # Perform the merge
+        merged = pd.merge_asof(
+            fraud_df.sort_values('ip_int'), 
+            ip_df.sort_values('lower_int'),
+            left_on='ip_int', right_on='lower_int',
+            by='upper_int', direction='nearest'
+        )
+        
         return merged.drop(['ip_int', 'lower_int', 'upper_int'], axis=1)
     
     def feature_engineering(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -51,4 +70,8 @@ class DataProcessor:
 
 def ip_to_int(ip: str) -> int:
     """Convert IP address to integer."""
-    return sum(int(x) << (24 - 8 * i) for i, x in enumerate(ip.split('.')))
+    if isinstance(ip, str):  # Check if ip is a string
+        parts = ip.split('.')
+        if len(parts) == 4:  # Ensure it has 4 parts
+            return sum(int(x) << (24 - 8 * i) for i, x in enumerate(parts))
+    return 0  # Return 0 for invalid input

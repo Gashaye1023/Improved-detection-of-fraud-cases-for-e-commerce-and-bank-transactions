@@ -1,0 +1,12 @@
+2025-08-21 17:29:52,940 - INFO - Configuration loaded from config.yaml
+2025-08-21 17:29:52,940 - INFO - Current working directory: /home/g/ALL/10/week 12/Improved-detection-of-fraud-cases-for-e-commerce-and-bank-transactions
+2025-08-21 17:29:52,940 - INFO - Files in directory: ['shap_analysis.py', 'ci.yaml', 'test_pipeline.py', 'dashboard', 'requirements.txt', 'data', 'notebooks', 'config.yaml', 'main.py', '.github', 'logs', 'README.md', '.git', 'streamlit_app.py', '.gitattributes', 'src', '.venv']
+2025-08-21 17:29:53,247 - INFO - Model loaded successfully from src/best_fraud_model.pkl
+2025-08-21 17:29:54,508 - INFO - Data loaded successfully from data/processed_fraud_data.csv
+2025-08-21 17:29:54,524 - INFO - Data prepared for SHAP analysis
+2025-08-21 21:02:34,116 - INFO - Configuration loaded from config.yaml
+2025-08-21 21:02:34,117 - INFO - Current working directory: /home/g/ALL/10/week 12/Improved-detection-of-fraud-cases-for-e-commerce-and-bank-transactions
+2025-08-21 21:02:34,117 - INFO - Files in directory: ['shap_analysis.py', 'ci.yaml', 'plots', 'test_pipeline.py', 'dashboard', 'requirements.txt', 'data', 'notebooks', 'config.yaml', 'main.py', '.github', 'logs', 'README.md', '.git', 'streamlit_app.py', '.gitattributes', 'src', '.venv']
+2025-08-21 21:02:35,016 - INFO - Model loaded successfully from src/best_fraud_model.pkl
+2025-08-21 21:02:37,989 - INFO - Data loaded successfully from data/processed_fraud_data.csv
+2025-08-21 21:02:38,030 - INFO - Data prepared for SHAP analysis

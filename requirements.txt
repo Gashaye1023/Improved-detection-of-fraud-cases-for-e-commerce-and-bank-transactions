@@ -1,29 +1,13 @@
-# Data manipulation and analysis
-pandas
-numpy
-# Data visualization
-matplotlib
-seaborn
-
-# Machine learning
-scikit-learn
-
-xgboost==1.7.5
-lightgbm==3.3.2
-statsmodels==0.13.5
-# Handling imbalanced datasets
-imbalanced-learn==0.9.1
-# Model explainability
-shap==0.41.0
-# For working with Jupyter notebooks
-notebook==6.5.3
-# Additional libraries
-requests # For API calls, if necessary
-# Streamlit for web app development
-scikit-learn
-imbalanced-learn
-shap
-matplo
-seaborn>
-streamlit
-pytest
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.2.2
+imbalanced-learn>=0.10
+joblib>=1.2.0
+pyyaml>=6.0
+shap>=0.41.0
+streamlit>=1.20.0
+matplotlib>=3.6
+pytest>=7.0.0
+pytest-cov>=4.0.0
+flake8>=5.0.0
+black>=22.0.0

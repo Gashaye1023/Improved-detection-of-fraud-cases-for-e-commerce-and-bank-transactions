@@ -1,0 +1,9 @@
+#!/bin/sh
+'''exec' "/home/g/ALL/10/week 12/Improved-detection-of-fraud-cases-for-e-commerce-and-bank-transactions/.venv/bin/python3" "$0" "$@"
+' '''
+import sys
+from pycodestyle import _main
+if __name__ == '__main__':
+    if sys.argv[0].endswith('.exe'):
+        sys.argv[0] = sys.argv[0][:-4]
+    sys.exit(_main())

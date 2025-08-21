@@ -1,0 +1,6 @@
+fraud_path: data/Fraud_Data.csv
+ip_path: data/IpAddress_to_Country.csv
+processed_data_path: data/processed_fraud_data.csv
+model_dir: src
+plot_dir: plots
+report_dir: reports
